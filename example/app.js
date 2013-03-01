@@ -49,7 +49,6 @@ var grid = new Backgrid.Grid({
   columns: columns,
   collection: territories,
   footer: Backgrid.Extension.Infinator
-//  footer: Backgrid.Extension.Paginator
 });
 
 // Render the grid and attach the root to your HTML document
