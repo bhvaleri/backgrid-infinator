@@ -1,1 +1,1 @@
-The example assume that it is in the same directory as your backgrid folder.
+The example assumes that it is in the same directory as your backgrid folder.
