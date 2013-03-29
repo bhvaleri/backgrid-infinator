@@ -29,7 +29,7 @@
       var collection = this.collection;
       var rowsToFetch = this.rowsToFetch;
        
-      $(window).scroll(function() {
+      $(window).scroll(_.debounce(function() {
         var doc = $(document).height();
         var win = $(window).height();
         var scroll = $(window).scrollTop();
@@ -39,7 +39,7 @@
           collection.setPageSize(currentSize + rowsToFetch); 
         };
         
-      });
+      }, 150));
     }
   });
 
