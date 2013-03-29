@@ -1,5 +1,6 @@
 /*
   backgrid-infinator
+  https://github.com/bhvaleri/backgrid-infinator
 
   Copyright (c) 2013 Bill Valeriote
   Licensed under the MIT @license.
