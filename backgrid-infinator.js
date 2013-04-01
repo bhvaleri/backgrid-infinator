@@ -11,7 +11,8 @@
   "use strict";
 
   /**
-     Infinator is footer element that allows for "infinite scroll" until the data runs out.
+     Infinator is footer element that allows for "infinite scroll" until the
+     data runs out.
 
      @class Backgrid.Extension.Infinator
   */
@@ -21,25 +22,24 @@
     className: "infinator",
 
     /** @property */
-    rowsToFetch: 10,
+    throttleWait: 100,
 
     initialize: function (options) {
       Backgrid.Footer.prototype.initialize.call(this, options);
 
-      var collection = this.collection;
-      var rowsToFetch = this.rowsToFetch;
-       
-      $(window).scroll(_.debounce(function() {
-        var doc = $(document).height();
-        var win = $(window).height();
-        var scroll = $(window).scrollTop();
+      var collection = this.collection.pageableCollection;
 
-        if (win + scroll > doc - 100){
-          var currentSize = collection.state.pageSize;
-          collection.setPageSize(currentSize + rowsToFetch); 
-        };
-        
-      }, 150));
+      $(window).scroll(_.throttle(function() {
+        var docHeight = $(document).height();
+        var viewportHeight = $(window).height();
+        var scrollTop = $(window).scrollTop();
+
+        if (viewportHeight + scrollTop > docHeight - 100 &&
+            collection.links[collection.state.currentPage + 1]) {
+          collection.getNextPage();
+        }
+
+      }, this.throttleWait));
     }
   });
 
