@@ -19,5 +19,3 @@ Assuming you have checked out Backgrid's repository, you can follow these steps 
 4. `ln -s ../src/extension/infinator/example example/infinator`.
 5. Fire up your webserver and point the document root to Backgrid's root directory.
 6. Type `http://localhost/examples/infinator/`
-
-I'm also hosting it on my Google Drive: https://googledrive.com/host/0B1Veq-x51Er1Umt1VDYwOVhKVkU/index.html.
