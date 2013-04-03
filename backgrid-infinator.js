@@ -75,7 +75,7 @@
       var containerTop = $('.infinite-container').position().top;
 
       $('.to-top').click(_.bind(function () {
-          $('body').animate({ scrollTop: containerTop },
+          $('body, html').animate({ scrollTop: containerTop },
             _.bind(function () { this._toTopShowing = false; }, this));
           $('.to-top').animate({ bottom: '-100px' });
         }, this));
