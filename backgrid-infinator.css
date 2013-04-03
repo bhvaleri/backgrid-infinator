@@ -14,3 +14,18 @@
   overflow: auto;
   border: 0;
 }
+
+.to-top {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  bottom: -100px;
+  right: 10px;
+  cursor: pointer;
+  background-color: #DDD;
+  color: #333;
+  opacity: 0.5;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+
