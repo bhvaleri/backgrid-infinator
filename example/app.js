@@ -53,7 +53,9 @@ function init() {
   var grid = new Backgrid.Grid({
     columns: columns,
     collection: territories.fullCollection,
-    footer: Backgrid.Extension.Infinator
+    footer: Backgrid.Extension.Infinator.extend({
+      scrollToTop: true
+    })
   });
 
   // Render the grid and attach the root to your HTML document
